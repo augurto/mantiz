@@ -53,7 +53,7 @@
                     $inv=mysqli_query($con,"select * from miembros where rol='Supervisor'");
                     while ($rw=mysqli_fetch_array($inv)){
                       $id=$rw["id"];
-                      $nombre=$rw["nombre"].' '.$rw["email"];
+                      $nombre=$rw["username"].' '.$rw["email"];
                       ?>
                       <option value="<?php echo $id;?>"><?php echo $nombre?></option>
                       <?php
@@ -80,7 +80,7 @@
                     $inv=mysqli_query($con,"select * from miembros where rol='Colaborador'");
                     while ($rw=mysqli_fetch_array($inv)){
                       $id=$rw["id"];
-                      $nombre=$rw["nombre"];
+                      $nombre=$rw["username"];
                       ?>
                       <option value="<?php echo $id;?>"><?php echo $nombre?></option>
                       <?php
