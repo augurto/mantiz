@@ -19,7 +19,7 @@
 		$grupo=mysqli_real_escape_string($con,(strip_tags($_POST["mod_grupo"],ENT_QUOTES)));
 			$estado=mysqli_real_escape_string($con,(strip_tags($_POST["mod_estado"],ENT_QUOTES)));
 		$id=intval($_POST['mod_id']);
-		$sql="UPDATE usuarios SET username='".$nombre."', dni='".$cedula."', email='".$email."', rol='".$rol."', grupo='".$grupo."', estado='".$estado."' WHERE id='".$id."'";
+		$sql="UPDATE miembros SET username='".$nombre."', dni='".$cedula."', email='".$email."', rol='".$rol."', grupo='".$grupo."', estado='".$estado."' WHERE id='".$id."'";
 		$query_update = mysqli_query($con,$sql);
 			if ($query_update){
 				$messages[] = "Actualizado satisfactoriamente.";
