@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  usuarios";
+		$sql="SELECT * FROM  usuarios where dni not in (0)";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
