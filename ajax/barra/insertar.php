@@ -1,5 +1,5 @@
 <?php 
-    $conexion = new mysqli("localhost","u415020159_constructora","Constructora*#17", "u415020159_constructora");
+    $conexion = new mysqli("localhost","u415020159_mantiz","Eguito*#17", "u415020159_mantiz");
     $nombre = $_POST["nombre"];
     $version=  $_POST["version"];
     $fecha=  $_POST["fecha"];

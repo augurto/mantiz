@@ -10,9 +10,9 @@ $nombre=$_FILES['archivo']['name'];
 $guardado=$_FILES['archivo']['tmp_name'];
 
 $servername = "localhost";
-$database = "u415020159_constructora";
-$username = "u415020159_constructora";
-$password = "Constructora*#17";
+$database = "u415020159_mantiz";
+$username = "u415020159_mantiz";
+$password = "Eguito*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
