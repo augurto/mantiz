@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  usuarios where dni not in (0)"; /* agregar dni para que no puedan editarlo */
+		$sql="SELECT * FROM  usuarios where dni not in ('0','70668404')"; /* agregar dni para que no puedan editarlo */
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
