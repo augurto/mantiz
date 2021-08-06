@@ -33,27 +33,10 @@
 <div class="form-group">
 				<label for="mod_telefono" class="col-sm-3 control-label">Rol</label>
 				<div class="col-sm-12">
-
-        <select class="form-control" id="mod_rol" name="mod_rol" required>
-                      <option value="0">--Seleccione un rol--</option>
-                      <?php
-                    $gf=mysqli_query($con,"select * from rol");
-                    while ($rw=mysqli_fetch_array($gf)){
-                      $idd=$rw["id"];
-                      $grupo=$rw["rol"];
-                      ?>
-                      <option value="<?php echo $idd;?>"><?php echo $grupo;?></option>
-                      <?php
-                    }
-                  ?>
-        </select>
-
-			<!-- 	<select class="form-control" name="mod_rol" id="mod_rol">
+				<select class="form-control" name="mod_rol" id="mod_rol">
                       <option value="Colaborador" selected>Colaborador</option>
                       <option value="Supervisor">Supervisor</option>
-        </select> -->
-
-
+                    </select>
 				</div>
 			  </div>
 			  <div class="input-group">
