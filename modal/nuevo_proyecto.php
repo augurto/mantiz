@@ -50,7 +50,7 @@
           <div class="resultados2" id="resultados2"></div>  
 <select id="browsers"  class="form-control select3"  name="investigador" style="width: 100%;">
    <?php
-                    $inv=mysqli_query($con,"select * from miembros where rol='Supervisor'");
+                    $inv=mysqli_query($con,"select * from usuarios where rol='Supervisor'");
                     while ($rw=mysqli_fetch_array($inv)){
                       $id=$rw["id"];
                       $nombre=$rw["nombre"].' '.$rw["apellidos"];
@@ -77,7 +77,7 @@
          <input type="hidden" class="form-control" name="ce" id="ce">  
                   <select class="form-control select2" id="estudiante" name="estudiante" style="width: 100%;">
                     <?php
-                    $inv=mysqli_query($con,"select * from miembros where rol='Colaborador'");
+                    $inv=mysqli_query($con,"select * from usuarios where rol='Colaborador'");
                     while ($rw=mysqli_fetch_array($inv)){
                       $id=$rw["id"];
                       $nombre=$rw["nombre"];
