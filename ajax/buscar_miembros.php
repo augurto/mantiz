@@ -8,7 +8,7 @@ session_start();
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if (isset($_GET['id'])){
 		$idd=intval($_GET['id']);
-			if ($delete1=mysqli_query($con,"DELETE FROM usuarios WHERE id='".$idd."'")){
+			if ($delete1=mysqli_query($con,"DELETE FROM miembros WHERE id='".$idd."'")){
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  usuarios where dni not in ('0','70668404')"; /* agregar dni para que no puedan editarlo */
+		$sql="SELECT * FROM  miembros where dni not in ('0','70668404')"; /* agregar dni para que no puedan editarlo */
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
