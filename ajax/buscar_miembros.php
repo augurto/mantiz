@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  usuarios";
+		$sql="SELECT * FROM  miembros";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -41,11 +41,8 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    
-					
+                    <th>Nombre</th>
 					<th>DNI</th>
-					<th>Nombre</th>
-					<th>Password</th>
 					<th>Email</th>
 					<th>Rol</th>
 					<th>Grupo</th>
@@ -57,9 +54,9 @@ session_start();
 				<?php
 				while ($row=mysqli_fetch_array($query)){
 						$id=$row['id'];
-						$nombre=$row['dni'];
-						$cedula=$row['username'];
-						$estado=$row['passqord'];
+						$nombre=$row['nombre'];
+						$cedula=$row['cedula'];
+						$estado=$row['estado'];
 						$email=$row['email'];
 						$rol=$row['rol'];
 						$grupo=$row['grupo'];
