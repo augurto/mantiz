@@ -8,7 +8,7 @@ session_start();
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if (isset($_GET['id'])){
 		$idd=intval($_GET['id']);
-			if ($delete1=mysqli_query($con,"DELETE FROM miembros WHERE id='".$idd."'")){
+			if ($delete1=mysqli_query($con,"DELETE FROM usuarios WHERE id='".$idd."'")){
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  miembros";
+		$sql="SELECT * FROM  usuarios";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -54,8 +54,8 @@ session_start();
 				<?php
 				while ($row=mysqli_fetch_array($query)){
 						$id=$row['id'];
-						$nombre=$row['nombre'];
-						$cedula=$row['cedula'];
+						$nombre=$row['username'];
+						$cedula=$row['dni'];
 						$estado=$row['estado'];
 						$email=$row['email'];
 						$rol=$row['rol'];
@@ -87,8 +87,8 @@ session_start();
 					<a href="#" class='btn btn-info' title='Eliminar miembro' onclick="eliminar(<?php echo $id;?>);" data-toggle="modal" data-target="#myModal2"><i class="fa fa-trash"></i></a> 
 					</span></td>
 				<?php } ?>
-						<input type="hidden" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
+						<input type="hidden" value="<?php echo $nombre;?>" id="username<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $cedula;?>" id="dni<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
