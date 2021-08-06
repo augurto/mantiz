@@ -1,5 +1,5 @@
 <?php
-sleep(3);
+sleep(2);
 session_start();
 
 require_once ("../config/db.php");
@@ -8,7 +8,7 @@ require_once ("../config/conexion.php");
 
 if(isset($_POST["username"]) && isset($_POST["password"])){
   $username = mysqli_real_escape_string($con, $_POST["username"]);
-  $password = mysqli_real_escape_string($con,  sha1($_POST["password"]));
+  $password = mysqli_real_escape_string($con, $_POST["password"]);
   $sql = "SELECT username,id,rol, estado FROM usuarios WHERE username='$username' AND password='$password' GROUP BY username";
   $result = mysqli_query($con, $sql);
   $num_row = mysqli_num_rows($result);
