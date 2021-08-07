@@ -34,7 +34,7 @@ $dni=sha1($cedula);
                 if ($query_check_user == 1) {
                     $errors[] = "Lo sentimos , el dni o el email ya está en uso.";
                 } else {
-		$sql="INSERT INTO miembros (id,username, dni, email, rol, grupo, password, estado) VALUES ('$cedula','$nombre', '$cedula','$email','$rol', '$grupo','$dni', '$estado')";
+		$sql="INSERT INTO miembros (id,username, nombre, dni, email, rol, grupo, password, estado) VALUES ('$cedula','$nombre','$nombre', '$cedula','$email','$rol', '$grupo','$dni', '$estado')";
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
 				$messages[] = "Ingresado satisfactoriamente.";
