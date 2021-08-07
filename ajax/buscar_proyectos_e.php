@@ -100,7 +100,7 @@ session_start();
                    		 $id_en=$rw["id"];
 
 
-                   		 $s=mysqli_query($con,"SELECT * FROM miembros WHERE username='".$username."'");
+                   		 $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."' or username='".$username."' ");
                    		$rwse=mysqli_fetch_array($s);
                    		 $id_username=$rwse["id"];
 
