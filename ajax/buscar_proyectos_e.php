@@ -41,7 +41,7 @@ session_start();
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
           $idc = mysqli_real_escape_string($con,(strip_tags($_REQUEST['idc'], ENT_QUOTES)));
 		 $aColumns = array('codigo_proyecto');//Columnas de busqueda
-		 $sTable = "usuarios";
+		 $sTable = "miembros";
 		 $sWhere = "Where username='".$username."'";
 		include 'pagination.php'; //include pagination file
 		//pagination variables
