@@ -89,7 +89,7 @@
 							$query1 = mysqli_query($con, $sql1);
 							$rows=mysqli_fetch_array($query1);
 
-							$sql2="SELECT * FROM  miembros where email='".$c."'";
+							$sql2="SELECT * FROM  miembros where username='".$c."'";
 							$query2 = mysqli_query($con, $sql2);
 							$row2=mysqli_fetch_array($query2);
 							$id_es=$row2['id'];
